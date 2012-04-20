@@ -1,0 +1,7 @@
+// on String
+take
+drop
+takeRight
+dropRight
+
+// advantage or disadvantage over substring?
