@@ -1,4 +1,4 @@
 ScalaForTheImpatient
 ====================
 
-Solutions and comments to Scala for the Impatient
+Solutions and comments to book Scala for the Impatient from Cay Horstman http://horstmann.com/scala/
