@@ -1,7 +1,56 @@
+// run in the REPL with scala> :load sol_ex10.scala
+
 // on String
-take
-drop
-takeRight
-dropRight
+scala> val s = "Scala for the Impatient"
+ 
+scala> s.take(5)
+// result are the first 5 characters from the String (or in general a List). Declared in GenTraversableLike and 
+// implementation of scala.collection.IndexedSeqOptimized.take used.
+// This is semantically equivalent with 
+scala> s.substring(0,5)
+
+
+scala> s.drop(10)
+// drop returns the string s with the first 10 characters removed. This is equivalend in functionality as s.substring(11)
+// Declared in GenTraversableLike and implementation of scala.collection.IndexedSeqOptimized.drop used.
+
+// This is semantically equivalent with 
+scala> s.substring(10)
+
+scala> s.takeRight(17)
+// take the last 17 characters from the string
+
+// This is semantically equivalent with 
+scala> s.substring(s.length - 17)
+
+
+scala> s.dropRight(18)
+// returns a new string which is equal to s with the last 18 characters removed
+
+// This is semantically equivalent with 
+scala> s.substring(0, s.length - 18)
 
 // advantage or disadvantage over substring?
+
+scala> "Scala".take(20)
+// results in "Scala" where
+
+scala> "Scala".substring(0,20)
+// results in a java.lang.StringIndexOutOfBoundsException.
+
+scala> "Scala".take(-1)
+// returns "" where 
+
+scala> "Scala".substring(-1)
+// results in a java.lang.StringIndexOutOfBoundsException.
+
+// So this means, that the take, drop, takeRight and dropRight methods are robust against edge cases of parameter values. 
+// The behavior is IMHO more intuitive, but may be not the desired one.
+
+scala> val sample = {for(i <- (1 to 20000).par) yield {scala.math.BigInt.probablePrime(200, scala.util.Random).toString(36)}}.seq
+
+scala> val calc1 = { val begin = System.currentTimeMillis; sample.foreach{_.take(30)}; val diff = System.currentTimeMillis - begin; diff}
+
+scala> val calc2 = { val begin = System.currentTimeMillis; sample.foreach{_.substring(0,30)}; val diff = System.currentTimeMillis - begin; diff}
+
+// the substring method seems to be a few millisecond faster, but this may only be on my computer, 2,4Ghz i5
