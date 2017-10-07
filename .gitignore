@@ -62,7 +62,7 @@ local.properties
 
 # IntelliJ
 out/
-worksheet/
+worksheet
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
