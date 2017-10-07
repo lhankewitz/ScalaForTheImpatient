@@ -79,6 +79,9 @@ local.properties
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/sbt.xml
+.idea/vcs.xml
+.idea/typescript-compiler.xml
 
 # Gradle:
 .idea/**/gradle.xml
