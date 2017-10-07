@@ -7,3 +7,4 @@ scala> res4 = 2
 <console>:14: error: reassignment to val
        res4 = 2
             ^
+  // result: all res varaibles are immutable!

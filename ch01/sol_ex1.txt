@@ -1,4 +1,7 @@
 scala> 3.
-%              &              *              +              -              /              >              >=             >>
->>>            ^              asInstanceOf   isInstanceOf   toByte         toChar         toDouble       toFloat        toInt
-toLong         toShort        toString       unary_+        unary_-        unary_~        |
+!=   +   <<   >=    abs         compareTo     getClass     isNaN           isValidChar    isWhole     round        to               toDegrees     toInt           toShort   underlying
+%    -   <=   >>    byteValue   doubleValue   intValue     isNegInfinity   isValidInt     longValue   self         toBinaryString   toDouble      toLong          unary_+   until
+&    /   ==   >>>   ceil        floatValue    isInfinite   isPosInfinity   isValidLong    max         shortValue   toByte           toFloat       toOctalString   unary_-   |
+*    <   >    ^     compare     floor         isInfinity   isValidByte     isValidShort   min         signum       toChar           toHexString   toRadians       unary_~
+
+// interesting, that so many had been added since the last time i tried this.

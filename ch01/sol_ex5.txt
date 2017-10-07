@@ -27,7 +27,7 @@ package <empty> {
   }
 }
 
-so the integer 10 is wrapped into a RichtInt (see implicit def intWrapper (x: Int): RichInt ) with
-the max method taking one parameter and returns the maximum of the first number and the parameter
+so the integer 10 is wrapped into a RichtInt (see implicit scala.Predef.intWrapper (x: Int): RichInt ) with
+the max method (inherited from ScalaNumberProxy) taking one parameter and returns the maximum of the first number and the parameter
 see the documentation of RichInt here 
-http://www.scala-lang.org/archives/downloads/distrib/files/nightly/docs/library/index.html#scala.runtime.RichInt
+http://www.scala-lang.org/api/current/scala/runtime/RichInt.html

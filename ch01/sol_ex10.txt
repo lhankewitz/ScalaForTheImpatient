@@ -11,7 +11,7 @@ scala> s.substring(0,5)
 
 
 scala> s.drop(10)
-// drop returns the string s with the first 10 characters removed. This is equivalend in functionality as s.substring(11)
+// drop returns the string s with the first 10 characters removed. This is equivalent in functionality as s.substring(11)
 // Declared in GenTraversableLike and implementation of scala.collection.IndexedSeqOptimized.drop used.
 
 // This is semantically equivalent with 
