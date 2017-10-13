@@ -2,6 +2,8 @@
 // java equivalent to for(int i = 10; i >= 0; i--){System.out.println(i)}
 scala> for(i <- 10 to 0 by -1) println(i)
 
+scala> for(i <- 10.to( 0, -1)) println(i)
+
 // other solution
 scala> var i = 10; while(i >= 0){ println(i); i -= 1}
 
