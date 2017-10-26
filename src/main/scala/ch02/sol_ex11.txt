@@ -4,4 +4,4 @@
 date"$year-$month-$day".
 * */
 
-see ch02.scala and /src/test/scala/ch02/Ch02_11_Test.scala
+see /src/main/scala/ch02/package.scala and /src/test/scala/ch02/Ch02_11_Test.scala
