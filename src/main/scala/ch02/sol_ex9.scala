@@ -9,10 +9,3 @@ def product(s:String):Long = {
    }
 
 product("Hello")
-
-
-
-
-
-
-
