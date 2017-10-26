@@ -1,43 +1,7 @@
 // run in REPL :load sol_ex10.scala
 /*
 11. Define a string interpolator date so that you can define a java.time.LocalDate as
-date"$year-$month-$day". You need to define an “implicit” class with a date method,
-like this:
-implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
-def date(args: Any*): LocalDate = . . .
-}
-args(i) is the value of the ith expression. Convert each to a string and then to
-an integer, and pass them to the LocalDate.of method. If you already know
-some Scala, add error handling. Throw an exception if there aren’t three
-arguments, or if they aren’t integers, or if they aren’t separated by dashes.
-(You get the strings in between the expressions as sc.parts.)
+date"$year-$month-$day".
 * */
 
-import java.time.LocalDate
-implicit class DateInterpolator(val sc: StringContext) extends AnyVal {
-  def date(args: Any*): LocalDate = {
-
-    if(args.length < 3 ) throw new IllegalArgumentException("At least year, month and date has to be given")
-    if(args.exists( _ == null)) throw new IllegalArgumentException("Non of the parameters is allowed to be null")
-    if(args.exists( !_.toString.matches("\\d+"))) throw new IllegalArgumentException("Some parameters are no integers")
-    sc.parts.take(2).foreach(println(_))
-    if(sc.parts.take(2).exists(_ != "-")) throw new IllegalArgumentException("Numbers have to be separated by '-'")
-
-      val year = getAsInt(0, args)
-      val month = getAsInt(1, args)
-      val day = getAsInt(2, args)
-
-      LocalDate.of(year, month.toInt, day.toInt)
-
-  }
-
-  private def getAsInt(index: Int, args: Any*) = {
-    args(index).toString.toInt
-  }
-}
-
-val year = "2017"
-val month = "10"
-val day = "26"
-
-date"$year-$month-$day"
+see ch02.scala and /src/test/scala/ch02/Ch02_11_Test.scala

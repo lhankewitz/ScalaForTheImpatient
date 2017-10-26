@@ -10,7 +10,7 @@ import org.scalatest.FunSuite
   * @since 26.10.17.
   */
 
-class Ch0211Test extends FunSuite  {
+class Ch02_11_Test extends FunSuite  {
 
   test("correct output for ") {
     val year = "2017"
@@ -47,10 +47,9 @@ class Ch0211Test extends FunSuite  {
     try {
       date"$year+$month+$day"
     } catch {
-      case e: IllegalArgumentException => {
+      case e: IllegalArgumentException =>
         println(e.getMessage)
         throw e
-      }
     }
   }
 
