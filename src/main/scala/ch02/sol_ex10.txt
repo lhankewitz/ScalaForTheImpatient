@@ -1,12 +1,11 @@
 // run in REPL :load sol_ex10.scala
 /*
-10. Write a function that computes x^n, where n is an integer. Use the following
+Write a function that calculates x^n, where n is an integer.
 recursive definition:
 • x^n = y · y if n is even and positive, where y = x^(n / 2).
 • x^n = x · x^(n – 1) if n is odd and positive.
 • x^0 = 1.
 • x^n = 1 / x^(–n) if n is negative.
- Don’t use a return statement.
 * */
 
 def pow(x: Double, n: Integer): Double = {
