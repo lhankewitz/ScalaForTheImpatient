@@ -1,0 +1,10 @@
+// sol_ex2.txt
+scala> val a = Array(1,2,3,4,5)
+
+for(i <- a.indices if i % 2 != 0) {
+    val tmp = a(i)
+    a(i) = a(i-1)
+    a(i-1) = tmp
+  }
+
+

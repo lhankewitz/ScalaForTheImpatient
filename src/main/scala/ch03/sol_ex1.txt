@@ -1,0 +1,3 @@
+// sol_ex1.txt
+val n = 5
+val a = for( i <- (0 until n).toArray) yield Random.nextInt(n)
