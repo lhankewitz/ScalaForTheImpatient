@@ -1,7 +1,3 @@
 // run in REPL :load sol_ex10.scala
-/*
-11. Define a string interpolator date so that you can define a java.time.LocalDate as
-date"$year-$month-$day".
-* */
 
 see /src/main/scala/ch02/package.scala and /src/test/scala/ch02/Ch02_11_Test.scala
